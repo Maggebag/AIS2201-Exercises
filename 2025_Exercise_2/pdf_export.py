@@ -5,20 +5,20 @@ import os
 
 
 # File data specific to the assignment
-assignment_name = "Exercise_1"
+assignment_name = "Exercise_2"
 
-files = ["1_the_audio_file.ipynb", 
-         "2_processing_audio.ipynb", 
-         "3_sinusoids.ipynb", 
-         "4_audio_analysis.ipynb", 
-         "5_audio_filtering.ipynb", 
-         "6_exercise_review.ipynb"]
+files = ["1_adding_sines.ipynb", 
+         "2_sinusoids_decomposition.ipynb", 
+         "3_frequency_shifting.ipynb",
+         "4_tide_prediction.ipynb", 
+         "5_exercise_review.ipynb"]
 
-title = "Exercise 1: An introduction to Digital Signal Processing using Python"
+title = "Exercise 2: Understanding the Fourier Transform"
 
 intro_text = """
-In this exercise, the focus is on audio signals. The exercise problems cover topics from sampling 
-and audio file formatting, to spectral analysis of digital audio and simple filtering of audio signals.  
+In this exercise, we will take a computational approach to understanding the fourier transform. 
+The problems in the exercise cover frequency mixing and complex downconversion, and how these 
+principles can be used to extract information on individual sinusoidal componets from a signal.
 """
 
 
@@ -62,8 +62,8 @@ def write_to_PDF(student_name: str):
     for file in files:
         with open(file, 'r', encoding='utf-8') as fh:
             nb = nbformat.read(fh, as_version=4)
-            nb.cells.pop(0) # Remove header
-            nb.cells.pop(-1) # Remove footer
+            #nb.cells.pop(0) # Remove header
+            #nb.cells.pop(-1) # Remove footer
             merged_cells.extend(nb.cells)
             
     merged.cells = merged_cells

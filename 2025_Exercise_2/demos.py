@@ -304,7 +304,7 @@ class FrequencyMixingDemo():
 
 # Frekvensmiksing      
 class FrequencyMixingSpectrumDemo:
-    def __init__(self, fig_num=4, figsize=(12,6)):
+    def __init__(self, fig_num=4, figsize=(9,5)):
         # Set up canvas
         plt.close(fig_num)
         self.fig = plt.figure(fig_num, figsize=figsize)
